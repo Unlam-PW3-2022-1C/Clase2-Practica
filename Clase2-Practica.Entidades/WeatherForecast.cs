@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace Clase2_Practica.Web
+namespace Clase2_Practica.Entidades
 {
     public class WeatherForecast
     {

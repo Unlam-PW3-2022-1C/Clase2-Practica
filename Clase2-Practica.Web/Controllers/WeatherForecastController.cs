@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Clase2_Practica.Entidades;
+using Clase2_Practica.Servicios;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,62 +13,32 @@ namespace Clase2_Practica.Web.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static List<WeatherForecast> ForecastList = new List<WeatherForecast>();
-
-        private static string[] Summaries = new string[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
+        
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IWeatherForecastService _weatherForecastService;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IWeatherForecastService weatherForecastService)
         {
             _logger = logger;
+            _weatherForecastService = weatherForecastService;
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            return _weatherForecastService.ObtenerTodos();
         }
 
         [HttpPost]
         public IEnumerable<WeatherForecast> Post(WeatherForecast weatherForecast)
         {
-            ForecastList.Add(weatherForecast);
-            return ForecastList;
+            return _weatherForecastService.Insertar(weatherForecast);
         }
 
         [HttpDelete]
         public IEnumerable<WeatherForecast> Delete(DateTime weatherForecastDate)
         {
-            ForecastList.RemoveAll(x => x.Date == weatherForecastDate);
-
-            #region Opcion Legacy
-            //Opcion Legacy
-            //WeatherForecast itemABorrar = null;
-            //foreach (var weatherForecast in ForecastList)
-            //{
-            //    if (weatherForecast.Date == weatherForecastDate)
-            //    {
-            //        itemABorrar = weatherForecast; 
-            //    }
-            //}
-            //if (itemABorrar != null)
-            //{
-            //    ForecastList.Remove(itemABorrar);
-            //}
-            #endregion
-
-            return ForecastList;
+            return _weatherForecastService.Borrar(weatherForecastDate);
         }
     }
 }
