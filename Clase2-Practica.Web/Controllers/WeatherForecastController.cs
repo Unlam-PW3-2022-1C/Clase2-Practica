@@ -11,7 +11,9 @@ namespace Clase2_Practica.Web.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        private static List<WeatherForecast> ForecastList = new List<WeatherForecast>();
+
+        private static string[] Summaries = new string[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
@@ -34,6 +36,37 @@ namespace Clase2_Practica.Web.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpPost]
+        public IEnumerable<WeatherForecast> Post(WeatherForecast weatherForecast)
+        {
+            ForecastList.Add(weatherForecast);
+            return ForecastList;
+        }
+
+        [HttpDelete]
+        public IEnumerable<WeatherForecast> Delete(DateTime weatherForecastDate)
+        {
+            ForecastList.RemoveAll(x => x.Date == weatherForecastDate);
+
+            #region Opcion Legacy
+            //Opcion Legacy
+            //WeatherForecast itemABorrar = null;
+            //foreach (var weatherForecast in ForecastList)
+            //{
+            //    if (weatherForecast.Date == weatherForecastDate)
+            //    {
+            //        itemABorrar = weatherForecast; 
+            //    }
+            //}
+            //if (itemABorrar != null)
+            //{
+            //    ForecastList.Remove(itemABorrar);
+            //}
+            #endregion
+
+            return ForecastList;
         }
     }
 }
