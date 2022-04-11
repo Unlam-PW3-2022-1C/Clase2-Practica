@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Clase2_Practica.Web
+namespace Clase2_Practica.WebCalculadorIMC
 {
     public class Startup
     {
@@ -28,11 +28,11 @@ namespace Clase2_Practica.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IWeatherForecastService, WeatherForecastService>();
+            services.AddSingleton<ICalculadorIMCService, CalculadorIMCService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Clase2_Practica.Web", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Clase2_Practica.WebCalculadorIMC", Version = "v1" });
             });
         }
 
@@ -43,7 +43,7 @@ namespace Clase2_Practica.Web
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Clase2_Practica.Web v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Clase2_Practica.WebCalculadorIMC v1"));
             }
 
             app.UseHttpsRedirection();
