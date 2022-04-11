@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Clase2_Practica.Web</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Clase2-Practica.Servicios\Clase2-Practica.Servicios.csproj" />
+    <ProjectReference Include="..\CalculadoraIMC.Servicios\CalculadoraIMC.Servicios.csproj" />
   </ItemGroup>
 
 </Project>

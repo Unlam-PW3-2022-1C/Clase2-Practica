@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Clase2_Practica.Web
+namespace WebCalculadoraIMC
 {
     public class Program
     {

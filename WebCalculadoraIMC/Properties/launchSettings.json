@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:3594",
-      "sslPort": 44303
+      "applicationUrl": "http://localhost:10394",
+      "sslPort": 44314
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Clase2_Practica.Web": {
+    "WebCalculadoraIMC": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
