@@ -46,7 +46,7 @@ namespace Clase2_Practica.Servicios.Implementaciones
             return IMCList;
         }*/
         #endregion
-        public IEnumerable<CalculadorIMC> Nuevo(CalculadorIMC calculadorIMC)
+        public CalculadorIMC Nuevo(CalculadorIMC calculadorIMC)
         {
             if (calculadorIMC.IMC < 16)
                 calculadorIMC.ComposicionCorporal = _composicionCorporal[0];
@@ -65,7 +65,7 @@ namespace Clase2_Practica.Servicios.Implementaciones
             if (calculadorIMC.IMC >= 40)
                 calculadorIMC.ComposicionCorporal = _composicionCorporal[7];
             _listIMC.Add(calculadorIMC);
-            return _listIMC;
+            return calculadorIMC;
         }
 
         public IEnumerable<CalculadorIMC> Borrar(DateTime calculadorIMCDate)

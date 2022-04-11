@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase2-Practica.Servicios",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase2-Practica.Entidades", "Clase2-Practica.Entidades\Clase2-Practica.Entidades.csproj", "{4A4C3596-D81E-4141-9CE7-500BD41730BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase2-Practica.WebCalculadorIMC", "Clase2-Practica.WebCalculadorIMC\Clase2-Practica.WebCalculadorIMC.csproj", "{EA4E487C-68B8-4185-8968-4CEF82C8BBCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase2-Practica.WebCalculadorIMC", "Clase2-Practica.WebCalculadorIMC\Clase2-Practica.WebCalculadorIMC.csproj", "{EA4E487C-68B8-4185-8968-4CEF82C8BBCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase2-Practica.WinformsCalculadorIMC", "Clase2-Practica.Winforms\Clase2-Practica.WinformsCalculadorIMC.csproj", "{7B066125-5779-4840-A658-A4FF6BCF9745}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{EA4E487C-68B8-4185-8968-4CEF82C8BBCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA4E487C-68B8-4185-8968-4CEF82C8BBCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA4E487C-68B8-4185-8968-4CEF82C8BBCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B066125-5779-4840-A658-A4FF6BCF9745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B066125-5779-4840-A658-A4FF6BCF9745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B066125-5779-4840-A658-A4FF6BCF9745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B066125-5779-4840-A658-A4FF6BCF9745}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

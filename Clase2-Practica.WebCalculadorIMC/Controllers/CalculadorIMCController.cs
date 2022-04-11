@@ -29,7 +29,7 @@ namespace Clase2_Practica.WebCalculadorIMC.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<CalculadorIMC> Post(CalculadorIMC calculadorIMC)
+        public CalculadorIMC Post(CalculadorIMC calculadorIMC)
         {
             return _calculadorIMCService.Nuevo(calculadorIMC);
         }

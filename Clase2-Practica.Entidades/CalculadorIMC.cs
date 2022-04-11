@@ -4,6 +4,13 @@ namespace Clase2_Practica.Entidades
 {
     public class CalculadorIMC
     {
+        public CalculadorIMC(DateTime date, double peso, double altura)
+        {
+            Date = date;
+            Peso = peso;
+            Altura = altura;
+        }
+
         public DateTime Date { get; set; }
 
         public double Peso { get; set; }
