@@ -7,7 +7,7 @@ namespace Clase2_Practica.Servicios
     public interface ICalculadorIMCService
     {
         public IEnumerable<CalculadorIMC> ObtenerTodos();
-        public IEnumerable<CalculadorIMC> Insertar(CalculadorIMC calculadorIMC);
+        public IEnumerable<CalculadorIMC> Nuevo(CalculadorIMC calculadorIMC);
         public IEnumerable<CalculadorIMC> Borrar(DateTime calculadorIMCDate);
 
     }

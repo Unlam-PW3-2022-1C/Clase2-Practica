@@ -13,10 +13,14 @@ namespace Clase2_Practica.Servicios.Implementaciones
 
         private static string[] _composicionCorporal = new string[]
         {
-            "Peso inferior al normal",
+            "Delgadez severa",
+            "Delgadez moderada",
+            "Delgadez leve",
             "Normal",
-            "Peso superior al normal",
-            "Obesidad"
+            "Preobesidad",
+            "Obesidad leve",
+            "Obesidad media",
+            "Obesidad mórbida"
         };
 
         public IEnumerable<CalculadorIMC> ObtenerTodos()
@@ -42,8 +46,24 @@ namespace Clase2_Practica.Servicios.Implementaciones
             return IMCList;
         }*/
         #endregion
-        public IEnumerable<CalculadorIMC> Insertar(CalculadorIMC calculadorIMC)
+        public IEnumerable<CalculadorIMC> Nuevo(CalculadorIMC calculadorIMC)
         {
+            if (calculadorIMC.IMC < 16)
+                calculadorIMC.ComposicionCorporal = _composicionCorporal[0];
+            if (calculadorIMC.IMC >= 16 && calculadorIMC.IMC < 17)
+                calculadorIMC.ComposicionCorporal = _composicionCorporal[1];
+            if (calculadorIMC.IMC >= 17 && calculadorIMC.IMC < 18.5)
+                calculadorIMC.ComposicionCorporal = _composicionCorporal[2];
+            if (calculadorIMC.IMC >= 18.5 && calculadorIMC.IMC < 25)
+                calculadorIMC.ComposicionCorporal = _composicionCorporal[3];
+            if (calculadorIMC.IMC >= 25 && calculadorIMC.IMC < 30)
+                calculadorIMC.ComposicionCorporal = _composicionCorporal[4];
+            if (calculadorIMC.IMC >= 30 && calculadorIMC.IMC < 35)
+                calculadorIMC.ComposicionCorporal = _composicionCorporal[5];
+            if (calculadorIMC.IMC >= 35 && calculadorIMC.IMC < 40)
+                calculadorIMC.ComposicionCorporal = _composicionCorporal[6];
+            if (calculadorIMC.IMC >= 40)
+                calculadorIMC.ComposicionCorporal = _composicionCorporal[7];
             _listIMC.Add(calculadorIMC);
             return _listIMC;
         }
