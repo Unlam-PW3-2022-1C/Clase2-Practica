@@ -1,3 +1,5 @@
+using Clase2_Practica.Servicios;
+using Clase2_Practica.Servicios.Implementaciones;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,7 +28,7 @@ namespace Clase2_Practica.WebCalculadorIMC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddSingleton<ICalculadorIMCService, CalculadorIMCService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

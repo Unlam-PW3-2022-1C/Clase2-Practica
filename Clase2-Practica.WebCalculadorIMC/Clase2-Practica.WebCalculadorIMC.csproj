@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Clase2-Practica.Entidades\Clase2-Practica.Entidades.csproj" />
+    <ProjectReference Include="..\Clase2-Practica.Servicios\Clase2-Practica.Servicios.csproj" />
   </ItemGroup>
 
 </Project>

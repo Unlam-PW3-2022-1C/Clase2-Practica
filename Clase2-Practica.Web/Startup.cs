@@ -1,5 +1,5 @@
 using Clase2_Practica.Servicios;
-using Clase2_Practica.Servicios.Implementacines;
+using Clase2_Practica.Servicios.Implementaciones;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
