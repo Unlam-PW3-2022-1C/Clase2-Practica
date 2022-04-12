@@ -1,5 +1,6 @@
 using Clase2_Practica.Servicios;
 using Clase2_Practica.Servicios.Implementacines;
+using Clase2_Practica.Servicios.Implementaciones;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +30,7 @@ namespace Clase2_Practica.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IWeatherForecastService, WeatherForecastService>();
+            services.AddScoped<ICalculadorIMCService, CalculadorIMCService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
