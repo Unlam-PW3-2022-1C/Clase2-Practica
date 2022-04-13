@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Clase2-Practica.Consola": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}
